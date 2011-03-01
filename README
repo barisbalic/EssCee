@@ -1,0 +1,2 @@
+EssCee is a ruby wrapper for the SC.exe command line utility found on windows machines.  It allows you to query and control windows services running locally or on remote machines.  This wrapper will let you make use of it programmatically but it is not intended for heavy or extended use, you should consider making use of the win32-service via http://win32utils.rubyforge.org/
+So why would I bother with this?  It's quick, it's easy, it doesn't involve compiling any extensions or installing anything extra.
