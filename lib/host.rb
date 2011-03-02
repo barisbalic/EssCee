@@ -1,6 +1,3 @@
-require 'response_parser'
-require 'service'
-
 module EssCee
   class Host
     attr_reader :hostname
@@ -10,8 +7,8 @@ module EssCee
     end
     
     def services
-      responses = ResponseParser.get_services(%[sc \\\\#{@hostname} query state= all])
-      responses.map {|service| EssCee::Service.new(@hostname, service) }
+      responses = ResponseParser.get_services(%x[sc \\\\#{@hostname} query state= all])
+      responses.map {|service| service[:name] => EssCee::Service.new(@hostname, service) }
     end
     
   end

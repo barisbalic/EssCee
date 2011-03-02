@@ -7,11 +7,11 @@ module EssCee
     end
         
     def stop
-        %x[sc \\\\#{@hostname} stop #{@name}]
+      %x[sc \\\\#{@hostname} stop #{@name}]
     end
     
     def start
-        %x[sc \\\\#{@hostname} start #{@name}]
+      %x[sc \\\\#{@hostname} start #{@name}]
     end 
   end
 end
