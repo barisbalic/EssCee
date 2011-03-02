@@ -8,7 +8,7 @@ module EssCee
     
     def services
       responses = ResponseParser.get_services(%x[sc \\\\#{@hostname} query state= all])
-      responses.map {|service| service[:name] => EssCee::Service.new(@hostname, service) }
+      responses.map_to_hash {|service| {service[:name] => EssCee::Service.new(@hostname, service)} }.merge
     end
     
   end

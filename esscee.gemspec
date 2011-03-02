@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.date = %q{2011-03-02}
   s.description = %q{A wrapper for the Windows SC command-line utility for managing services.}
   s.email = %q{baris.balic@uswitch.com}
-  s.extra_rdoc_files = ["README", "lib/esscee.rb", "lib/host.rb", "lib/response_parser.rb", "lib/service.rb"]
-  s.files = ["Manifest", "README", "Rakefile", "esscee.gemspec", "lib/esscee.rb", "lib/host.rb", "lib/response_parser.rb", "lib/service.rb", "spec/localhost.query.all", "spec/response_parser_spec.rb"]
+  s.extra_rdoc_files = ["README", "lib/array.rb", "lib/esscee.rb", "lib/host.rb", "lib/response_parser.rb", "lib/service.rb"]
+  s.files = ["Manifest", "README", "Rakefile", "esscee.gemspec", "lib/array.rb", "lib/esscee.rb", "lib/host.rb", "lib/response_parser.rb", "lib/service.rb", "spec/localhost.query.all", "spec/response_parser_spec.rb"]
   s.homepage = %q{http://github.com/barisbalic/EssCee}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Esscee", "--main", "README"]
   s.require_paths = ["lib"]
