@@ -2,7 +2,6 @@ Manifest
 README
 Rakefile
 esscee.gemspec
-lib/array.rb
 lib/esscee.rb
 lib/host.rb
 lib/response_parser.rb
