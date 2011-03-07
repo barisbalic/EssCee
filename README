@@ -5,5 +5,5 @@ So why would I bother with this?  It's quick, it's easy, it doesn't involve comp
 Usage:
 
 EssCee::Host.new('localhost').services                          - Get a fresh list of services on localhost
-EssCee::Host.new('localhost').services['AeLookupSvc'].stop      - Stop the AeLookupSvc service on localhost
-EssCee::Host.new('localhost').services['AeLookupSvc'].start     - Start the AeLookupSvc service on localhost
+EssCee::Host.new('localhost').services('AeLookupSvc').stop      - Stop the AeLookupSvc service on localhost
+EssCee::Host.new('localhost').services('AeLookupSvc').start     - Start the AeLookupSvc service on localhost
