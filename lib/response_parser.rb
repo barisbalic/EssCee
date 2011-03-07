@@ -1,11 +1,11 @@
 module EssCee
   class ResponseParser
     
-    LABELS = [/SERVICE_NAME:\s/i, /DISPLAY_NAME:\s/i, /\s*TYPE\s*:/, /\s*STATE\s*:/]
+    LABELS = [/\s*SERVICE_NAME:\s*/i, /\s*DISPLAY_NAME:\s*/i, /\s*TYPE\s*:/, /\s*STATE\s*:/]
     
     def self.get_services(response)
       delimited_response, services = response.split("\n"), []
-
+  
       delimited_response.each_with_index do |line, index|
         if(start_of_service?(line)) then
           services << {
@@ -38,7 +38,7 @@ module EssCee
     end    
     
     def self.clean_up(line)
-      LABELS.each {|label| return line.gsub!(label, '') if line =~ label }
+     LABELS.each {|label| return line.gsub!(label, '') if line =~ label }
     end
   end
 end
